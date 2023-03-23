@@ -7,5 +7,5 @@ For deleting directories: `makefile Delete`.
 
 - March 23, 2023:
 
-Upload the first version. Just one function is implemented.  
-Thing to do: implement the other functions, commenting. 
+Upload the first version.  
+Thing to do: commenting. 
