@@ -1,6 +1,7 @@
 //convert_declib.cpp
 
 #include <iostream>
+#include <string>
 #include "GeneradorAleatorioEnteros.h"
 #include "Convert_Declib.h"
 using namespace std;
@@ -29,11 +30,57 @@ void Convert_bin(int *bin, int n){
 	}
 }
 
-/*
-int Convert_hex(int *hex, int n){
 
+string Convert_hex(int n){
+
+	string hex_str = "";
+
+	while(n > 0){
+		int reminder = n%16;
+
+		if(reminder < 10){
+			hex_str = to_string(reminder) + hex_str;
+		}
+		else{
+			hex_str = (char)('A' + reminder - 10) + hex_str;
+		}
+		n /= 16;
+	}
+
+	return hex_str;
 }
 
-int Convert_oct(int *oct, int n){
+/*
+string Convert_hex(int n){
+    string hex_str = "";
 
-}*/
+    while (n > 0) {
+        int remainder = n % 16;
+        if (remainder < 10) {
+            hex_str = to_string(remainder) + hex_str;
+        } else {
+            hex_str = (char)('A' + remainder - 10) + hex_str;
+        }
+        n /= 16;
+    }
+
+    return hex_str;
+}
+*/
+
+void Convert_oct(int *oct, int n){
+
+	for(int i = TAM_BITS - 1; i >= 0; i--){
+		*(oct + i) = n%8;
+		n /= 8;
+	}
+}
+
+
+
+
+
+
+
+
+

@@ -17,15 +17,15 @@ $(OBJ)/Convert_Declib.o : $(SRC)/Convert_Declib.cpp
 
 $(LIB)/libConvert_Declib.a : $(OBJ)/Convert_Declib.o
 	@echo [+] Creating library 
-	@ar -rvs $(LIB)/libConvert_Declib.a $(OBJ)/Convert_Declib.o
+	@ar -rcs $(LIB)/libConvert_Declib.a $(OBJ)/Convert_Declib.o
 
 $(OBJ)/GeneradorAleatorioEnteros.o : $(SRC)/GeneradorAleatorioEnteros.cpp
-	@echo Creando objeto GeneradorAleatorioEnteros.o
+	@echo [+] Creating GeneradorAleatorioEnteros.o
 	@g++ -std=c++14 -Wall -Wextra -Werror -c -o $(OBJ)/GeneradorAleatorioEnteros.o $(SRC)/GeneradorAleatorioEnteros.cpp -I$(INCLUDE)
         
 $(LIB)/libGeneradorAleatorioEnteros.a : $(OBJ)/GeneradorAleatorioEnteros.o
-	@echo Creando libGeneradorAleatorioEnteros.a
-	@ar -rvs $(LIB)/libGeneradorAleatorioEnteros.a $(OBJ)/GeneradorAleatorioEnteros.o
+	@echo [+] Creating library
+	@ar -rcs $(LIB)/libGeneradorAleatorioEnteros.a $(OBJ)/GeneradorAleatorioEnteros.o
 
 #Executable
 

@@ -1,6 +1,7 @@
 //convert_dec.cpp
 
 #include <iostream>
+#include <string>
 #include "Convert_Declib.h"
 #include "GeneradorAleatorioEnteros.h"
 using namespace std;
@@ -31,14 +32,29 @@ int main(int argc, char* argv[]){
 		exit(2);
 	}
 
-	cout << "Number to convert: " << n << endl;
+	cout << "Number to convert: " << n;
 
 	Convert_bin(bin, n);
 
-	ShowArray("Binary number", bin, TAM_BITS, TAM_BITS);
+	ShowArray("Binary number: ", bin, TAM_BITS, TAM_BITS);
 
-	//Convert_hex(hex, n);
+	cout << "Hexadecimal number: " << endl;
 
-	//Convert_oct(oct, n);
+	cout << Convert_hex(n) << endl;
 
+	Convert_oct(oct, n);
+
+	cout << endl;
+
+	ShowArray("Octal number: ", oct, TAM_BITS, TAM_BITS);
 }
+
+
+
+
+
+
+
+
+
+
