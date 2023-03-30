@@ -13,5 +13,5 @@ Things to do: commenting.
 - March 30, 2023:
 
 Fixed an error in the makefile. 
-I Started commenting
+I Started commenting. 
 Things to do: this project is finished
