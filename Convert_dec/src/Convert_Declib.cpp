@@ -1,4 +1,4 @@
-//convert_declib.cpp
+//Convert_Declib.cpp
 
 #include <iostream>
 #include <string>
@@ -6,8 +6,9 @@
 #include "Convert_Declib.h"
 using namespace std;
 
-const int TAM_BITS = 8;
-
+//Function that shows an array and a message.
+//"n_datos" is the size of the array (default = TAM_BITS)
+//"datos_linea" is the nummber of elements that are shown in a line (default = TAM_BITS)
 void ShowArray(const char *msg, int *pv, int n_datos, int datos_linea){
 	cout << msg << endl;
 
@@ -17,11 +18,13 @@ void ShowArray(const char *msg, int *pv, int n_datos, int datos_linea){
 		if((i + 1) % datos_linea == 0){
 			cout << endl;
 		}
-
 	}
 	cout << endl;
 }
 
+
+//Function that convert decimal to binary by using a for loop and 
+//storing the binary numbers in "bin" array
 void Convert_bin(int *bin, int n){
 
 	for(int i = TAM_BITS - 1; i >= 0; i--){
@@ -30,7 +33,11 @@ void Convert_bin(int *bin, int n){
 	}
 }
 
-
+//Function that convert decimal to hexadecimal
+//Creates a empty string to store the final number. Using a 
+//while loop decimal is conerted. If number ("reminder") is 
+//greater than 10, number is converted to a char, depending of the 
+//number
 string Convert_hex(int n){
 
 	string hex_str = "";
@@ -44,30 +51,13 @@ string Convert_hex(int n){
 		else{
 			hex_str = (char)('A' + reminder - 10) + hex_str;
 		}
+		
 		n /= 16;
 	}
-
 	return hex_str;
 }
 
-/*
-string Convert_hex(int n){
-    string hex_str = "";
-
-    while (n > 0) {
-        int remainder = n % 16;
-        if (remainder < 10) {
-            hex_str = to_string(remainder) + hex_str;
-        } else {
-            hex_str = (char)('A' + remainder - 10) + hex_str;
-        }
-        n /= 16;
-    }
-
-    return hex_str;
-}
-*/
-
+//Works very similar to Convert_bin (basically is the same thing xdd)
 void Convert_oct(int *oct, int n){
 
 	for(int i = TAM_BITS - 1; i >= 0; i--){
