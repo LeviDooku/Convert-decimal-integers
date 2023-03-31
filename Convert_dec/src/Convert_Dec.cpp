@@ -1,4 +1,4 @@
-//Convert_dec.cpp
+//Convert_Dec.cpp
 
 #include <iostream>
 #include <string>
@@ -42,7 +42,7 @@ int main(int argc, char* argv[]){
 
 	Convert_bin(bin, n);
 
-	ShowArray("Binary number: ", bin, TAM_BITS, TAM_BITS);
+	ShowArray("Binary number: ", bin);
 
 	cout << "Hexadecimal number: " << endl;
 
@@ -52,7 +52,7 @@ int main(int argc, char* argv[]){
 
 	cout << endl;
 
-	ShowArray("Octal number: ", oct, TAM_BITS, TAM_BITS);
+	ShowArray("Octal number: ", oct);
 }
 
 
