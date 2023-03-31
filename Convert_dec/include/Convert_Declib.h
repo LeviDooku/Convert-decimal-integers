@@ -9,9 +9,9 @@ using namespace std;
 const int TAM_BITS = 8;
 
 
-void Convert_bin(int *bin, int n=TAM_BITS);
+void Convert_bin(int *bin, int n);
 string Convert_hex(int n);
-void Convert_oct(int *oct, int n=TAM_BITS);
-void ShowArray(const char *msg, int *pv, int n_datos, int datos_linea);
+void Convert_oct(int *oct, int n);
+void ShowArray(const char *msg, int *pv, int n_datos=TAM_BITS, int datos_linea=TAM_BITS);
 
 #endif
